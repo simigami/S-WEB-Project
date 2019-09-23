@@ -43,11 +43,6 @@ echo $_SESSION['userid'];
 ?> 님 안녕하세요<br/>
 <button onclick="location.href='./logout.php'">로그아웃</button><br/>
 <?php
-if($_SESSION['userid']=="root"){
-?>
-<button onclick="location.href='./xsstest.html'">XSS실습</button><br/>
-<?php
-}
 }
 else {
 ?>
