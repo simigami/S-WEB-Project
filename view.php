@@ -12,13 +12,12 @@ if($rows['id']=="root"){
 			location.replace("./main.php");
 		</script>
 <?php
+		exit(-1);
 	}
 }
-else{
-	$newhit=$rows['hit']+1;
-	$hit = "update bulletin SET hit = '$newhit' where number = '$number'";
-	$hitquery=$connect->query($hit);
-}
+$newhit=$rows['hit']+1;
+$hit = "update bulletin SET hit ='$newhit' where number='$number'";
+$hitquery=$connect->query($hit);
 ?>
 
 <table class="view_table" align=center>
