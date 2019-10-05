@@ -1,8 +1,8 @@
 <?php
-$del=$_GET['title'];
+$del=$_GET['number'];
 session_start();
 $connect=mysqli_connect("localhost","root","mysql","helloworld");
-$query = "delete from bulletin where title='$del'";
+$query = "delete from bulletin where number='$del'";
 $result = $connect->query($query);
 ?>
 <script>

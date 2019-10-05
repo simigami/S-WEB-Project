@@ -2,7 +2,7 @@
 $connect=mysqli_connect("localhost","root","mysql","helloworld");
 $number=$_GET['number'];
 session_start();
-$query="select title, content, date, hit, id from bulletin where number='$number'";
+$query="select title, content, date, hit, id, filename, filepath from bulletin where number='$number'";
 $result=$connect->query($query);
 $rows=mysqli_fetch_assoc($result);
 if($rows['id']=="root"){
@@ -38,14 +38,24 @@ else{
                 <?php echo $rows['content']?></td>
         </tr>
         </table>
-
+<?php
+if($rows['filename']!=NULL){
+?>
+	<div class="view_btn">
+<?php
+		echo $rows['filename'];
+?>
+                <button class="view_btn1" onclick="location.href='./download.php?number=<?php echo $number?>'">첨부파일 다운로드</button>
+<?php
+}
+?>
 	<div class="view_btn">
                 <button class="view_btn1" onclick="location.href='./main.php'">목록으로</button>
 <?php
 if($_SESSION['userid']==root || $_SESSION['userid']==$rows['id']){
 
 ?>
-<button class="view_btn1" onclick="location.href='./delete.php?title=<?php echo $rows['title']?>'">게시글 삭제</button>
+<button class="view_btn1" onclick="location.href='./delete.php?number=<?php echo $number?>'">게시글 삭제</button>
 <?php
 }
 ?>

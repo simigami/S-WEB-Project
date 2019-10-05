@@ -5,7 +5,7 @@ $pwd=$_POST['pwd'];
 $pwc=$_POST['pwc'];
 $date=date('Y-m-d H:i:s');
 if($id==NULL || $pwd==NULL || $pwc==NULL){
-?>
+?><
         <script>
                 alert('PLEASE FILL OUT ALL OF YOU BLANKS');
                 location.replace('./login.html');

@@ -5,7 +5,6 @@
 	$pwd=$_POST['pwd'];
 	$query="select * from userinfo where id='$id'";
 	$result=$connect->query($query);
-
 	if(mysqli_num_rows($result)==1){
 		$row=mysqli_fetch_assoc($result);
 		if($row['pwd']==$pwd){
