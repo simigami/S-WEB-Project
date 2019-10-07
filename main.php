@@ -1,7 +1,17 @@
 <!DOCTYPE html> 
 <html>
 <head>
+	<title>HELLWORLD BULLETIN!</title>
         <meta charset = 'utf-8'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+<style>
+      .a {
+        margin: 70px 0px;
+        text-align: center;
+        font-size: 140px;
+        color: #2196F3;
+      }
+</style>
 </head>
 <style>
         table{
@@ -88,7 +98,15 @@ else {
                 <td width = "50" align = "center"><?php echo $total?></td>
                 <td width = "500" align = "center">
                 <a href ="view.php?number=<?php echo $rows['number']?>">
-                <?php echo $rows['title']?></td>
+	<?php 		echo $rows['title'];
+	?></a>
+	<?php
+		if($rows['filename'] != NULL){
+	?>		<i class="fas fa-file-download"></i>
+	<?php
+		}
+	?>
+		</td>
                   <td width = "100" align = "center"><?php echo $rows['id']?></td>
                 <td width = "200" align = "center"><?php echo $rows['date']?></td>
                 <td width = "50" align = "center"><?php echo $rows['hit']?></td>
