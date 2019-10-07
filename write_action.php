@@ -19,6 +19,17 @@ if(empty($title)){
 <?php
 		exit(-1);
 }
+if(empty($content)){
+?>
+	<script>
+		alert("내용에 아무것도 입력하지 않았습니다");
+		history.go(-1);
+	</script>
+<?php
+		exit(-1);
+}
+?>
+<?php
 if(!empty($uf['name'])){
 	$now=getcwd();
 	$name=$uf['name'];
