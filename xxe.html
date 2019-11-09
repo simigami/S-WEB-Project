@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<meta charset='utf-8'/>
+<form method="POST" action="./xxe.php">
+<p>
+<label>TEXT PAGE</label>
+</p>
+<p>
+<textarea class="form-control input-block" name="abcd" rows="12" cols="100">
+<?php
+	echo "put something!";
+?>
+</textarea>
+</p>
+<input class="btn btn-primary" type="submit">
+</form>
+</html>
